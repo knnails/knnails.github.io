@@ -377,15 +377,12 @@
   /* ---------------- Abertura (luz da marca a acender) ---------------- */
   function initIntro() {
     var intro = $('#intro'); if (!intro) return;
-    var seen = false;
-    try { seen = sessionStorage.getItem('kn_intro') === '1'; } catch (e) {}
     var img = $('.intro-img', intro);
-    if (seen || params.get('intro') === '0') { intro.remove(); return; }
+    if (params.get('intro') === '0') { intro.remove(); return; }
     document.body.classList.add('intro-on');
     var closed = false;
     function close() {
       if (closed) return; closed = true;
-      try { sessionStorage.setItem('kn_intro', '1'); } catch (e) {}
       intro.classList.add('out'); document.body.classList.remove('intro-on');
       setTimeout(function () { intro.remove(); }, 1000);
     }
