@@ -1,0 +1,10 @@
+Coloque aqui as imagens originais, com exatamente estes nomes:
+
+  logo-kn.png        → a logo KN original (fundo transparente, se possível)
+  kn-dourada.jpg     → a imagem dourada (JÁ INCLUÍDA — usada na abertura com a luz a acender)
+  profissional.jpg   → fotografia da profissional com a ferramenta de manicure
+                       (vertical, idealmente 1200 × 1500 px)
+
+Enquanto um ficheiro não existir, o site mostra um espaço reservado discreto
+(o nome "Kelle Nails Design" em texto, ou a moldura "Fotografia em breve").
+Não é usada nenhuma outra logo ou marca.
