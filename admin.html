@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Painel · Kelle Nails Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { padding-bottom: 40px; }
+    .admin-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 18px; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+    .admin-top h1 { font-size: 1.7rem; margin: 0; }
+    .login { max-width: 420px; margin: 12vh auto 0; background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 32px; box-shadow: var(--shadow); }
+    .tabs { display: flex; gap: 6px; overflow-x: auto; padding: 16px 0; }
+    .tab { border: 1px solid var(--line); background: var(--white); border-radius: 999px; padding: 10px 18px; font: 500 .8rem var(--sans); letter-spacing: .08em; cursor: pointer; white-space: nowrap; color: var(--ink-soft); }
+    .tab[aria-selected="true"] { background: var(--gold-grad); color: #fff; border-color: transparent; }
+    .tab .count { display: inline-block; min-width: 20px; margin-left: 6px; background: var(--champagne); color: var(--gold-deep); border-radius: 999px; padding: 0 6px; font-size: .72rem; }
+    .pane { display: grid; gap: 14px; }
+    .card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+    .row-head { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+    .row-head strong { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; }
+    .meta { color: var(--ink-soft); font-size: .88rem; margin: 6px 0 12px; display: grid; gap: 2px; }
+    .pill { display: inline-block; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; background: var(--champagne); color: var(--gold-deep); }
+    .pill.pendente { background: #F6E3B8; color: #7A5410; }
+    .pill.confirmada { background: #DDE8D3; color: #3D5A2C; }
+    .pill.concluida { background: #D7E2EA; color: #2F4A5E; }
+    .pill.cancelada { background: #EEDAD5; color: #8A3424; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .actions .btn { min-height: 40px; padding: 0 16px; font-size: .7rem; }
+    .filters { display: flex; gap: 8px; flex-wrap: wrap; }
+    .sched { display: grid; gap: 10px; }
+    .sched label { display: grid; grid-template-columns: 110px 1fr; gap: 10px; align-items: center; text-transform: capitalize; }
+    .sched input, .inline-form input, .inline-form select { font: 400 1rem var(--sans); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; background: var(--ivory); width: 100%; min-height: 44px; }
+    .inline-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; align-items: end; }
+    .thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+    .thumbs img { aspect-ratio: 1; object-fit: cover; border-radius: 12px; width: 100%; background: var(--beige); }
+    .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--ink); color: var(--champagne); padding: 12px 20px; border-radius: 999px; font-size: .9rem; z-index: 90; }
+    .warn { background: #F6E3B8; border-radius: 12px; padding: 12px 16px; font-size: .9rem; }
+    @media (max-width: 520px) { .sched label { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="admin-top">
+      <h1>Painel privado</h1>
+      <div class="actions"><a class="btn btn-line" href="./" target="_blank" rel="noopener">Ver site</a><button class="btn btn-line" id="logout" hidden>Sair</button></div>
+    </div>
+
+    <form class="login" id="login">
+      <p class="eyebrow">Kelle Nails Design</p>
+      <h2 style="font-size:2rem">Entrar</h2>
+      <label class="field"><span>Palavra-passe</span><input type="password" id="pw" autocomplete="current-password" required></label>
+      <p class="form-error" id="loginErr"></p>
+      <button class="btn btn-gold btn-block">Entrar</button>
+    </form>
+
+    <div id="app" hidden>
+      <div id="warnings"></div>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" data-tab="pedidos" aria-selected="true">Pedidos<span class="count" id="cPend"></span></button>
+        <button class="tab" role="tab" data-tab="horarios">Horários</button>
+        <button class="tab" role="tab" data-tab="bloqueios">Dias bloqueados</button>
+        <button class="tab" role="tab" data-tab="galeria">Galeria<span class="count" id="cFotos"></span></button>
+        <button class="tab" role="tab" data-tab="avaliacoes">Avaliações<span class="count" id="cRev"></span></button>
+        <button class="tab" role="tab" data-tab="indicacoes">Indicações<span class="count" id="cRef"></span></button>
+      </div>
+
+      <section data-pane="pedidos" class="pane">
+        <div class="filters">
+          <button class="tab" data-filter="proximos" aria-selected="true">Próximos</button>
+          <button class="tab" data-filter="pendente">Por confirmar</button>
+          <button class="tab" data-filter="passados">Anteriores</button>
+          <button class="tab" data-filter="todos">Todos</button>
+        </div>
+        <div id="bookings" class="pane"></div>
+      </section>
+
+      <section data-pane="horarios" class="pane" hidden>
+        <div class="card">
+          <p>Escreva os horários de início em que aceita clientes, separados por vírgulas (ex.: <code>10:00, 13:30</code>). Cada horário recebe uma única cliente. Deixe vazio para dia fechado.</p>
+          <form id="schedForm" class="sched"></form>
+          <p class="actions" style="margin-top:14px"><button class="btn btn-gold" form="schedForm">Guardar horários</button></p>
+        </div>
+      </section>
+
+      <section data-pane="bloqueios" class="pane" hidden>
+        <div class="card">
+          <p>Bloqueie férias, folgas ou dias cheios. Pedidos já feitos para esse dia não são apagados.</p>
+          <form id="blockForm" class="inline-form">
+            <label class="field"><span>Data</span><input type="date" id="blockDate" required></label>
+            <label class="field"><span>Motivo (privado)</span><input id="blockReason" maxlength="80"></label>
+            <button class="btn btn-gold">Bloquear dia</button>
+          </form>
+        </div>
+        <div id="blocks" class="pane"></div>
+      </section>
+
+      <section data-pane="galeria" class="pane" hidden>
+        <div class="card">
+          <p>Só aparecem aqui atendimentos com autorização de fotografias. A fotografia fica <strong>pendente</strong> até a aprovar. Evite mostrar rosto, nome ou elementos que identifiquem a cliente.</p>
+          <form id="photoForm" class="inline-form">
+            <label class="field"><span>Atendimento</span><select id="photoCode" required></select></label>
+            <label class="field"><span>Legenda (opcional)</span><input id="photoCaption" maxlength="80"></label>
+            <label class="field"><span>Fotografia</span><input type="file" id="photoFile" accept="image/jpeg,image/png,image/webp" required></label>
+            <button class="btn btn-gold">Enviar fotografia</button>
+          </form>
+        </div>
+        <div id="photos" class="thumbs"></div>
+      </section>
+
+      <section data-pane="avaliacoes" class="pane" hidden>
+        <div id="reviewsAdmin" class="pane"></div>
+      </section>
+
+      <section data-pane="indicacoes" class="pane" hidden>
+        <div class="card"><p>Atendimentos feitos por indicação. A recompensa (Shellac nas unhas dos pés) só fica disponível quando o atendimento indicado está <strong>concluído e pago</strong>.</p></div>
+        <div id="referrals" class="pane"></div>
+      </section>
+    </div>
+  </div>
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

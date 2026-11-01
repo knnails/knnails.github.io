@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="meta.title">Kelle Nails Design · Seven Sisters, North London</title>
+  <meta name="description" data-i18n-attr="content:meta.desc" content="Kelle Nails Design — alongamento em fibra de vidro e Shellac em Seven Sisters, North London.">
+  <meta name="theme-color" content="#F4EADB">
+  <meta property="og:title" content="Kelle Nails Design">
+  <meta property="og:description" content="Seven Sisters, North London">
+  <meta property="og:image" content="assets/kn-dourada.jpg">
+  <link rel="icon" href="assets/logo-kn.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Abertura: a luz em volta da marca acende quando a cliente entra -->
+  <div class="intro" id="intro">
+    <div class="intro-bg" aria-hidden="true"><img src="assets/kn-dourada.jpg" alt=""></div>
+    <div class="intro-stage">
+      <img src="assets/kn-dourada.jpg" alt="Kelle Nails Design — North London" class="intro-img" fetchpriority="high">
+      <div class="intro-glow" aria-hidden="true"></div>
+    </div>
+    <button class="intro-skip" id="introSkip" type="button" data-i18n="intro.enter">Entrar</button>
+  </div>
+  <a class="skip" href="#main">Skip</a>
+  <div class="demo-banner" id="demoBanner" hidden data-i18n="demo.banner"></div>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand" aria-label="Kelle Nails Design">
+        <img src="assets/logo-kn.png" alt="Kelle Nails Design — logo KN" class="brand-logo" data-fallback="brandText">
+        <span class="brand-text" id="brandText" hidden>Kelle <em>Nails</em> Design</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#servicos" data-i18n="nav.services">Serviços</a>
+        <a href="#agendar" data-i18n="nav.book">Agendar</a>
+        <a href="#galeria" data-i18n="nav.gallery">Galeria</a>
+        <a href="#avaliacoes" data-i18n="nav.reviews">Avaliações</a>
+        <a href="#indicacao" data-i18n="nav.referral">Indicação</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-btn" id="langBtn" type="button" data-i18n-attr="aria-label:lang.label" aria-label="Mudar para inglês">
+          <span class="lang-opt" data-l="pt">PT</span><span class="lang-sep">/</span><span class="lang-opt" data-l="en">EN</span>
+        </button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav"><span></span><span></span><span class="sr" data-i18n="nav.menu">Menu</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ INÍCIO ============ -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Seven Sisters · North London</p>
+          <h1 class="hero-title" data-i18n="hero.title">Bem-vinda ao nosso espaço de beleza.</h1>
+          <p class="hero-quote" id="heroQuote" data-i18n="hero.quote" data-animate></p>
+          <div class="hero-ctas">
+            <a href="#agendar" class="btn btn-gold" data-i18n="btn.book">Agendar horário</a>
+            <a href="#galeria" class="btn btn-line" data-i18n="btn.gallery">Ver trabalhos</a>
+          </div>
+          <div class="hero-social">
+            <a class="chip js-wa" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
+              <span data-i18n="btn.whatsapp">WhatsApp</span></a>
+            <a class="chip js-ig" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM21.9 7.1a5.9 5.9 0 0 0-1.6-4.2A5.9 5.9 0 0 0 16.1 1.3C14.4 1.2 9.6 1.2 7.9 1.3a5.9 5.9 0 0 0-4.2 1.6A5.9 5.9 0 0 0 2.1 7.1C2 8.8 2 13.6 2.1 15.3a5.9 5.9 0 0 0 1.6 4.2 5.9 5.9 0 0 0 4.2 1.6c1.7.1 6.5.1 8.2 0a5.9 5.9 0 0 0 4.2-1.6 5.9 5.9 0 0 0 1.6-4.2c.1-1.7.1-6.5 0-8.2Zm-2.2 10.1a3.3 3.3 0 0 1-1.9 1.9c-1.3.5-4.4.4-5.8.4s-4.5.1-5.8-.4a3.3 3.3 0 0 1-1.9-1.9c-.5-1.3-.4-4.4-.4-5.8s-.1-4.5.4-5.8a3.3 3.3 0 0 1 1.9-1.9c1.3-.5 4.4-.4 5.8-.4s4.5-.1 5.8.4a3.3 3.3 0 0 1 1.9 1.9c.5 1.3.4 4.4.4 5.8s.1 4.5-.4 5.8Z"/></svg>
+              <span data-i18n="btn.instagram">Instagram</span></a>
+          </div>
+        </div>
+
+        <figure class="hero-portrait">
+          <div class="portrait-arch">
+            <img src="assets/profissional.jpg" alt="Nail technician da Kelle Nails Design" class="portrait-img" data-fallback="portraitBrand">
+            <img src="assets/kn-dourada.jpg" alt="Kelle Nails Design — North London" class="portrait-img portrait-brand" id="portraitBrand" hidden>
+          </div>
+          <figcaption class="portrait-tag"><span data-i18n="hero.role">Nail technician</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ SERVIÇOS ============ -->
+    <section class="section" id="servicos">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="services.eyebrow">Serviços</p>
+          <h2 data-i18n="services.title">Cuidado com acabamento impecável</h2>
+        </header>
+        <div class="services">
+          <article class="service-card">
+            <h3 data-i18n="services.fibra.title">Alongamento em fibra de vidro</h3>
+            <p class="service-sub" data-i18n="services.fibra.sub">Nas mãos</p>
+            <p data-i18n="services.fibra.desc"></p>
+            <a href="#agendar" class="link-gold js-pick" data-service="fibra" data-i18n="services.cta">Agendar este serviço</a>
+          </article>
+          <article class="service-card">
+            <h3 data-i18n="services.shellac.title">Aplicação de Shellac</h3>
+            <p class="service-sub" data-i18n="services.shellac.sub">Esmaltação em gel</p>
+            <p data-i18n="services.shellac.desc"></p>
+            <a href="#agendar" class="link-gold js-pick" data-service="shellac" data-i18n="services.cta">Agendar este serviço</a>
+          </article>
+          <article class="service-card">
+            <h3 data-i18n="services.francesinha.title">Francesinha</h3>
+            <p class="service-sub" data-i18n="services.francesinha.sub">Acabamento clássico</p>
+            <p data-i18n="services.francesinha.desc"></p>
+            <a href="#agendar" class="link-gold js-pick" data-service="francesinha" data-i18n="services.cta">Agendar este serviço</a>
+          </article>
+          <article class="service-card">
+            <h3 data-i18n="services.cut_maos.title">Cutilagem</h3>
+            <p class="service-sub" data-i18n="services.cut_maos.sub">Só mãos</p>
+            <p data-i18n="services.cut_maos.desc"></p>
+            <a href="#agendar" class="link-gold js-pick" data-service="cut_maos" data-i18n="services.cta">Agendar este serviço</a>
+          </article>
+          <article class="service-card">
+            <h3 data-i18n="services.cut_pes.title">Cutilagem</h3>
+            <p class="service-sub" data-i18n="services.cut_pes.sub">Só pés</p>
+            <p data-i18n="services.cut_pes.desc"></p>
+            <a href="#agendar" class="link-gold js-pick" data-service="cut_pes" data-i18n="services.cta">Agendar este serviço</a>
+          </article>
+          <article class="service-card">
+            <h3 data-i18n="services.cut_maos_pes.title">Cutilagem</h3>
+            <p class="service-sub" data-i18n="services.cut_maos_pes.sub">Mãos e pés</p>
+            <p data-i18n="services.cut_maos_pes.desc"></p>
+            <a href="#agendar" class="link-gold js-pick" data-service="cut_maos_pes" data-i18n="services.cta">Agendar este serviço</a>
+          </article>
+        </div>
+        <p class="note center" data-i18n="services.price"></p>
+      </div>
+    </section>
+
+    <!-- ============ AGENDAMENTO ============ -->
+    <section class="section section-tint" id="agendar">
+      <div class="wrap narrow">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="book.eyebrow">Agendamento</p>
+          <h2 data-i18n="book.title">Escolha o seu momento</h2>
+          <p class="lead" data-i18n="book.lead"></p>
+        </header>
+
+        <div class="booking" id="booking">
+          <div class="booking-status" id="bookingStatus" role="status" aria-live="polite"></div>
+
+          <form id="bookingForm" novalidate>
+            <fieldset class="step" id="stepService">
+              <legend><span class="step-n">1</span><span data-i18n="book.step1">Serviço</span></legend>
+              <div class="svc-options">
+                <label class="svc-opt"><input type="radio" name="service" value="fibra"><span><strong data-i18n="services.fibra.title"></strong><small data-i18n="services.fibra.sub"></small></span></label>
+                <label class="svc-opt"><input type="radio" name="service" value="shellac"><span><strong data-i18n="services.shellac.title"></strong><small data-i18n="services.shellac.sub"></small></span></label>
+                <label class="svc-opt"><input type="radio" name="service" value="francesinha"><span><strong data-i18n="services.francesinha.title"></strong><small data-i18n="services.francesinha.sub"></small></span></label>
+                <label class="svc-opt"><input type="radio" name="service" value="cut_maos"><span><strong data-i18n="services.cut_maos.title"></strong><small data-i18n="services.cut_maos.sub"></small></span></label>
+                <label class="svc-opt"><input type="radio" name="service" value="cut_pes"><span><strong data-i18n="services.cut_pes.title"></strong><small data-i18n="services.cut_pes.sub"></small></span></label>
+                <label class="svc-opt"><input type="radio" name="service" value="cut_maos_pes"><span><strong data-i18n="services.cut_maos_pes.title"></strong><small data-i18n="services.cut_maos_pes.sub"></small></span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="step" id="stepDate" disabled>
+              <legend><span class="step-n">2</span><span data-i18n="book.step2">Data</span></legend>
+              <div class="cal">
+                <div class="cal-head">
+                  <button type="button" class="cal-nav" id="calPrev" data-i18n-attr="aria-label:book.prev">‹</button>
+                  <p class="cal-title" id="calTitle"></p>
+                  <button type="button" class="cal-nav" id="calNext" data-i18n-attr="aria-label:book.next">›</button>
+                </div>
+                <div class="cal-grid" id="calGrid" role="grid"></div>
+                <p class="cal-legend"><span class="dot"></span><span data-i18n="book.available"></span></p>
+              </div>
+            </fieldset>
+
+            <fieldset class="step" id="stepTime" disabled>
+              <legend><span class="step-n">3</span><span data-i18n="book.step3">Horário</span></legend>
+              <div class="times" id="times"><p class="hint" data-i18n="book.pickDate"></p></div>
+            </fieldset>
+
+            <fieldset class="step" id="stepDetails" disabled>
+              <legend><span class="step-n">4</span><span data-i18n="book.step4">Os seus dados</span></legend>
+              <div class="fields">
+                <label class="field"><span data-i18n="book.name">Nome</span>
+                  <input name="name" autocomplete="name" maxlength="60" required data-i18n-attr="placeholder:book.namePh"></label>
+                <label class="field"><span data-i18n="book.wa">WhatsApp</span>
+                  <input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" required data-i18n-attr="placeholder:book.waPh"></label>
+                <label class="field field-full"><span data-i18n="book.referral">Indicada por (opcional)</span>
+                  <input name="referral" maxlength="60" data-i18n-attr="placeholder:book.referralPh"></label>
+                <label class="hp" aria-hidden="true">Website <input name="website" tabindex="-1" autocomplete="off"></label>
+              </div>
+              <label class="check"><input type="checkbox" name="acceptTerms" required><span data-i18n="book.terms"></span></label>
+
+              <div class="consent-box">
+                <p class="consent-title" data-i18n="book.photoTitle">Autorização de fotografias — opcional</p>
+                <label class="check"><input type="checkbox" name="photoConsent"><span data-i18n="book.photoText"></span></label>
+              </div>
+
+              <div class="summary" id="summary" hidden>
+                <p class="summary-label" data-i18n="book.summary">Resumo</p>
+                <p class="summary-text" id="summaryText"></p>
+              </div>
+              <p class="form-error" id="formError" role="alert"></p>
+              <button type="submit" class="btn btn-gold btn-block" id="submitBtn" data-i18n="book.submit">Enviar pedido</button>
+              <p class="note" data-i18n="book.addressNote"></p>
+            </fieldset>
+          </form>
+
+          <div class="result" id="result" hidden tabindex="-1">
+            <div class="result-icon" aria-hidden="true">✦</div>
+            <h3 data-i18n="book.okTitle"></h3>
+            <p class="demo-note" id="resultDemo" hidden data-i18n="demo.result"></p>
+            <p data-i18n="book.okText"></p>
+            <div class="code-box"><span data-i18n="book.code"></span><strong id="resultCode"></strong></div>
+            <p class="note" data-i18n="book.codeHelp"></p>
+            <a class="btn btn-gold btn-block" id="resultWa" target="_blank" rel="noopener" hidden data-i18n="book.sendWa"></a>
+            <div class="manual" id="resultManual" hidden>
+              <p class="manual-title" data-i18n="book.manualTitle"></p>
+              <p class="note" data-i18n="book.manualText"></p>
+              <pre class="msg" id="resultText"></pre>
+              <div class="manual-actions">
+                <button type="button" class="btn btn-gold" id="copyMsg" data-i18n="book.copy"></button>
+                <a class="btn btn-line js-wa" href="#" target="_blank" rel="noopener" data-i18n="book.openWa"></a>
+              </div>
+            </div>
+            <p class="note" data-i18n="book.addressNote"></p>
+            <button type="button" class="link-gold" id="again" data-i18n="book.again"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERIA ============ -->
+    <section class="section" id="galeria">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="gallery.eyebrow">Galeria da semana</p>
+          <h2 data-i18n="gallery.title">Trabalhos realizados</h2>
+          <p class="lead" data-i18n="gallery.lead"></p>
+        </header>
+        <div class="gallery" id="gallery"></div>
+        <p class="empty" id="galleryEmpty" data-i18n="gallery.empty"></p>
+        <p class="center"><a class="btn btn-line js-ig" href="#" target="_blank" rel="noopener" data-i18n="gallery.more">Mais no Instagram</a></p>
+      </div>
+    </section>
+
+    <!-- ============ AVALIAÇÕES ============ -->
+    <section class="section section-tint" id="avaliacoes">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="reviews.eyebrow">Avaliações</p>
+          <h2 data-i18n="reviews.title">O que dizem as clientes</h2>
+        </header>
+        <div class="reviews" id="reviews"></div>
+        <p class="empty" id="reviewsEmpty" data-i18n="reviews.empty"></p>
+
+        <details class="panel" id="reviewPanel">
+          <summary data-i18n="reviews.formTitle">Já foi atendida? Deixe a sua avaliação</summary>
+          <form id="reviewForm" class="panel-body" novalidate>
+            <p class="note" data-i18n="reviews.formLead"></p>
+            <div class="fields">
+              <label class="field"><span data-i18n="reviews.code"></span><input name="code" required maxlength="12" data-i18n-attr="placeholder:reviews.codePh" autocapitalize="characters"></label>
+              <label class="field"><span data-i18n="privacy.wa"></span><input name="whatsapp" type="tel" inputmode="tel" required maxlength="20"></label>
+            </div>
+            <fieldset class="stars"><legend data-i18n="reviews.rating"></legend>
+              <input type="radio" name="rating" id="r5" value="5"><label for="r5" title="5">★</label>
+              <input type="radio" name="rating" id="r4" value="4"><label for="r4" title="4">★</label>
+              <input type="radio" name="rating" id="r3" value="3"><label for="r3" title="3">★</label>
+              <input type="radio" name="rating" id="r2" value="2"><label for="r2" title="2">★</label>
+              <input type="radio" name="rating" id="r1" value="1"><label for="r1" title="1">★</label>
+            </fieldset>
+            <label class="field field-full"><span data-i18n="reviews.text"></span><textarea name="text" rows="4" maxlength="600" required></textarea></label>
+            <label class="check"><input type="checkbox" name="allowPublish"><span data-i18n="reviews.allow"></span></label>
+            <p class="form-msg" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn btn-gold" data-i18n="reviews.submit"></button>
+          </form>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ INDICAÇÃO ============ -->
+    <section class="section" id="indicacao">
+      <div class="wrap narrow">
+        <div class="referral">
+          <p class="eyebrow" data-i18n="ref.eyebrow">Promoção por indicação</p>
+          <h2 data-i18n="ref.title">Gostou do meu trabalho? Compartilhe essa experiência!</h2>
+          <p class="referral-text" data-i18n="ref.text"></p>
+          <p class="note" data-i18n="ref.rule"></p>
+          <button type="button" class="btn btn-gold" id="shareBtn" data-i18n="ref.share">Partilhar com uma amiga</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LOCALIZAÇÃO E PRIVACIDADE ============ -->
+    <section class="section section-tint" id="local">
+      <div class="wrap two-col">
+        <div>
+          <p class="eyebrow" data-i18n="loc.eyebrow">Localização</p>
+          <h2 data-i18n="loc.title">Seven Sisters, North London</h2>
+          <p data-i18n="loc.text"></p>
+        </div>
+        <div>
+          <details class="panel" id="privacyPanel">
+            <summary data-i18n="privacy.title">Privacidade e fotografias</summary>
+            <form id="consentForm" class="panel-body" novalidate>
+              <p class="note" data-i18n="privacy.text"></p>
+              <div class="fields">
+                <label class="field"><span data-i18n="privacy.code"></span><input name="code" required maxlength="12" data-i18n-attr="placeholder:reviews.codePh" autocapitalize="characters"></label>
+                <label class="field"><span data-i18n="privacy.wa"></span><input name="whatsapp" type="tel" inputmode="tel" required maxlength="20"></label>
+              </div>
+              <p class="form-msg" role="status" aria-live="polite"></p>
+              <div class="manual-actions">
+                <button type="submit" class="btn btn-line" value="withdraw" data-i18n="privacy.withdraw"></button>
+                <button type="submit" class="btn btn-gold" value="give" data-i18n="privacy.give"></button>
+              </div>
+            </form>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p class="footer-brand">Kelle <em>Nails</em> Design</p>
+      <p data-i18n="footer.area"></p>
+      <p class="footer-links">
+        <a class="js-wa" href="#" target="_blank" rel="noopener">WhatsApp</a> ·
+        <a class="js-ig" href="#" target="_blank" rel="noopener">Instagram</a>
+      </p>
+      <p class="small">© <span id="year"></span> Kelle Nails Design. <span data-i18n="footer.rights"></span></p>
+    </div>
+  </footer>
+
+  <div class="sticky-bar">
+    <a href="#agendar" class="btn btn-gold" data-i18n="sticky.book">Agendar</a>
+    <a class="btn btn-line js-wa" href="#" target="_blank" rel="noopener" data-i18n="btn.whatsapp">WhatsApp</a>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
