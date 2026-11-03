@@ -1,10 +1,17 @@
-Coloque aqui as imagens originais, com exatamente estes nomes:
+KELLE NAILS DESIGN — VERSÃO FINAL
 
-  logo-kn.png        → a logo KN original (fundo transparente, se possível)
-  kn-dourada.jpg     → a imagem dourada (JÁ INCLUÍDA — usada na abertura com a luz a acender)
-  profissional.jpg   → fotografia da profissional com a ferramenta de manicure
-                       (vertical, idealmente 1200 × 1500 px)
+1) publicar/  → os 5 ficheiros que vão para o GitHub (knnails.github.io)
+     index.html      site completo (estilos, textos, abertura e imagens JÁ DENTRO)
+     admin.html      painel privado
+     config.js       único ficheiro a editar: cole aqui a URL da agenda (API_URL)
+     robots.txt      esconde o painel dos motores de busca
+     kn-dourada.jpg  só para a imagem que aparece quando partilha o link
 
-Enquanto um ficheiro não existir, o site mostra um espaço reservado discreto
-(o nome "Kelle Nails Design" em texto, ou a moldura "Fotografia em breve").
-Não é usada nenhuma outra logo ou marca.
+   Como publicar: abra https://github.com/knnails/knnails.github.io/upload/main,
+   arraste os 5 ficheiros de dentro da pasta "publicar" e clique em Commit changes.
+   Os ficheiros antigos (app.js, i18n.js, styles.css, pastas) podem ficar: já não são usados.
+
+2) kelle-nails-demonstracao.html → abra com dois cliques no computador ou telemóvel.
+   Mostra o site com uma agenda DE EXEMPLO. Nada é guardado nem enviado.
+
+3) agenda/Code.gs → código da agenda para o Google Apps Script (passo seguinte).
